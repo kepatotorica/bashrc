@@ -23,24 +23,10 @@ unset env
 alias edit="atom ~/.bashrc"
 alias reset="source ~/.bashrc"
 alias onyx="ssh -Y kepatotorica@onyx.boisestate.edu"
-alias cs321="cd ~/cs321"
 alias grind="make clean && make && valgrind --leak-check=yes"
 
 homeAlias='/c/Users/kep/.bashrc'
 
-addAlias() {
-    $(newAlias)
-}
-
-addalias() {
-    $(newAlias)
-}
-
-newalias() {
-    $(newAlias)
-}
-
-#TODO change the name after alias
 newAlias() {
     touch temp;
     echo -n 'alias ' >> temp;
