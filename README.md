@@ -28,19 +28,6 @@ alias grind="make clean && make && valgrind --leak-check=yes"
 
 homeAlias='/c/Users/kep/.bashrc'
 
-addAlias() {
-    $(newAlias)
-}
-
-addalias() {
-    $(newAlias)
-}
-
-newalias() {
-    $(newAlias)
-}
-
-#TODO change the name after alias
 newAlias() {
     touch temp;
     echo -n 'alias ' >> temp;
