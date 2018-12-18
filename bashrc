@@ -20,7 +20,7 @@ fi
 
 unset env
 
-alias edit="atom ~/.bashrc"
+alias edit="code ~/.bashrc"
 alias reset="source ~/.bashrc"
 alias onyx="ssh -Y kepatotorica@onyx.boisestate.edu"
 alias cs321="cd ~/cs321"
