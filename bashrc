@@ -1,3 +1,16 @@
+alias school="cd /c/Users/kep/Desktop/school/ "
+alias downloads='start ~/Downloads'
+alias Downloads='start ~/Downloads'
+alias open="start ."
+alias jn="jupyter notebook &"
+alias dbProject="cd /c/Users/kep/Downloads/charity-shell/charity-shell "
+alias killnpm='cmd "/C TASKKILL /IM node.exe /F"'
+alias mygit="cd /c/Users/kep/mygit/ "
+alias aob="cd /c/Users/kep/mygit/aobStringCreator "
+alias defaultMaster="git branch --set-upstream-to origin/master "
+alias defaultmaster="git branch --set-upstream-to origin/master "
+alias pushmaster="git branch --set-upstream-to origin/master "
+alias pushMaster="git branch --set-upstream-to origin/master "
 env=~/.ssh/agent.env
 
 agent_load_env () { test -f "$env" && . "$env" >| /dev/null ; }
