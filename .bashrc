@@ -1,3 +1,16 @@
+alias school="cd /c/Users/kep/Desktop/school/ "
+alias downloads='start ~/Downloads'
+alias Downloads='start ~/Downloads'
+alias open="start ."
+alias jn="jupyter notebook &"
+alias dbProject="cd /c/Users/kep/Downloads/charity-shell/charity-shell "
+alias killnpm='cmd "/C TASKKILL /IM node.exe /F"'
+alias mygit="cd /c/Users/kep/mygit/ "
+alias aob="cd /c/Users/kep/mygit/aobStringCreator "
+alias defaultMaster="git branch --set-upstream-to origin/master "
+alias defaultmaster="git branch --set-upstream-to origin/master "
+alias pushmaster="git branch --set-upstream-to origin/master "
+alias pushMaster="git branch --set-upstream-to origin/master "
 env=~/.ssh/agent.env
 
 agent_load_env () { test -f "$env" && . "$env" >| /dev/null ; }
@@ -23,10 +36,24 @@ unset env
 alias edit="code ~/.bashrc"
 alias reset="source ~/.bashrc"
 alias onyx="ssh -Y kepatotorica@onyx.boisestate.edu"
+alias cs321="cd ~/cs321"
 alias grind="make clean && make && valgrind --leak-check=yes"
 
 homeAlias='/c/Users/kep/.bashrc'
 
+addAlias() {
+    $(newAlias)
+}
+
+addalias() {
+    $(newAlias)
+}
+
+newalias() {
+    $(newAlias)
+}
+
+#TODO change the name after alias
 newAlias() {
     touch temp;
     echo -n 'alias ' >> temp;
