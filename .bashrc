@@ -1,10 +1,5 @@
-alias transapi="cd /c/Paylocity/paylocity.taxfiling.transmission.api "
 alias master="git checkout master; git pull master"
 alias temp="git branch -d temp; git checkout -b temp; git checkout -"
-alias formgen="cd /c/Paylocity/paylocity.taxfiling.transmission/"
-alias trans="cd /c/Paylocity/paylocity.taxfiling.transmission/"
-alias transdb="cd /c/Paylocity/paylocity.taxfiling.transmission.db"
-alias transui="cd /c/Paylocity/paylocity.taxfiling.transmission.ui"
 alias fetch="git fetch "
 alias gitreset="git reset --hard "
 alias push="git push "
@@ -28,20 +23,6 @@ alias combine="echo 'git reset --soft HEAD~1 && git commit, use cc(num commits t
 # https://stackoverflow.com/questions/5189560/squash-my-last-x-commits-together-using-git/5201642#5201642
 alias oneline="git log --oneline"
 alias checkout="git checkout -"
-alias workspace="cd /c/Users/KTotorica/source/repos"
-alias visual="cd /c/Users/KTotorica/source/repos"
-alias visualStudio="cd /c/Users/KTotorica/source/repos"
-alias repos="cd /c/Users/KTotorica/source/repos"
-alias desktop="cd /c/Users/KTotorica/Desktop"
-alias Desktop="cd /c/Users/KTotorica/Desktop"
-alias mygit="cd /c/Paylocity "
-alias myGit="cd /c/Paylocity "
-alias MyGit="cd /c/Paylocity "
-alias Mygit="cd /c/Paylocity "
-alias Paylocity="cd /c/Paylocity "
-alias paylocity="cd /c/Paylocity "
-alias pay="cd /c/Paylocity "
-
 alias cdDownloads='cd ~/Downloads'
 alias downloads='start ~/Downloads'
 alias Downloads='start ~/Downloads'
