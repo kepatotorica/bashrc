@@ -6,6 +6,5 @@ source ~/.bashrc
 echo "installing bash theme"
 mkdir ~/.bash/themes/PL/
 scp theme.bash ~/.bash/themes/PL/theme.bash
-echo "installing Powerline Fonts"
-installPowerlineFonts
+echo "If you don't have powerline fonts use this alias to download them installPowerlineFonts"
 source ~/.bashrc
