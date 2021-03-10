@@ -7,3 +7,4 @@ echo "installing bash theme"
 cp theme.bash ~/.bash/themes/git_bash_windows_powerline/theme.bash
 echo "installing Powerline Fonts"
 installPowerlineFonts
+reset
