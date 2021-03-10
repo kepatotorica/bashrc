@@ -1,3 +1,3 @@
 to install run
-'sh install.sh'
+**sh install.sh**
 in the bash terminal
