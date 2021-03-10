@@ -142,14 +142,14 @@ installPowerlineFonts(){
     # the text guide https://www.hanselman.com/blog/how-to-make-a-pretty-prompt-in-windows-terminal-with-powerline-nerd-fonts-cascadia-code-wsl-and-ohmyposh
 
     curl -LJO https://github.com/microsoft/cascadia-code/releases/download/v2102.25/CascadiaCode-2102.25.zip
-    unzip CascadiaCode-2102.25.zip
-    mkdir c:/Windows/Fonts
-    mv ttf/CascadiaCodePL.ttf c:/Windows/Fonts/
-    mv ttf/CascadiaMonoPL.ttf c:/Windows/Fonts/
-    rm -fr otf
-    rm -fr woff2
-    rm -fr ttf
-    rm -fr CascadiaCode-2102.25.zip
+    unzip CascadiaCode-2102.25.zip >/dev/null
+    mkdir c:/Windows/Fonts >/dev/null
+    mv ttf/CascadiaCodePL.ttf c:/Windows/Fonts/ >/dev/null
+    mv ttf/CascadiaMonoPL.ttf c:/Windows/Fonts/ >/dev/null
+    rm -fr otf >/dev/null
+    rm -fr woff2 >/dev/null
+    rm -fr ttf >/dev/null
+    rm -fr CascadiaCode-2102.25.zip >/dev/null
     echo ""
     echo ""
     echo ""
