@@ -135,15 +135,11 @@ generateEmbedded(){
 
 
 #Install the fonts
-installPowerline(){
+installPowerlineFonts(){
     # You must do the stuff below to get powerline in git bash, also make sure to set the font to a PL font in settings.json. 
-    cd $HOME
-    mkdir -p .bash/themes/git_bash_windows_powerline
-    git clone https://github.com/diesire/git_bash_windows_powerline.git .bash/themes/git_bash_windows_powerline
-
     # here is a video for the prompt steps 
     # the text guide https://www.hanselman.com/blog/how-to-make-a-pretty-prompt-in-windows-terminal-with-powerline-nerd-fonts-cascadia-code-wsl-and-ohmyposh
-    cd -
+
     curl -LJO https://github.com/microsoft/cascadia-code/releases/download/v2102.25/CascadiaCode-2102.25.zip
     unzip CascadiaCode-2102.25.zip
     mkdir c:/Windows/Fonts
