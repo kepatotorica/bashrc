@@ -60,6 +60,7 @@ alias open="start ."
 alias edit="code ~/.bashrc"
 alias editTerminal="code ~/.bashrc"
 alias settings="code ~/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json"
+alias theme="code ~/.bash/themes/PL/theme.bash"
 alias reset="source ~/.bashrc"
 
 homeAlias=$HOME'/.bashrc'
@@ -158,7 +159,7 @@ installPowerlineFonts(){
 
 # cd ..
 # the fonts https://github.com/microsoft/cascadia-code/releases?WT.mc_id=-blog-scottha
-THEME=$HOME/.bash/themes/git_bash_windows_powerline/theme.bash
+THEME=~/.bash/themes/PL/theme.bash
 if [ -f $THEME ]; then
    . $THEME
 fi
