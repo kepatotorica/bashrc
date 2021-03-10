@@ -62,6 +62,7 @@ alias editTerminal="code ~/.bashrc"
 alias settings="code ~/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json"
 alias theme="code ~/.bash/themes/PL/theme.bash"
 alias reset="source ~/.bashrc"
+alias updateBash="git clone https://github.com/kepatotorica/bashrc.git; cd bashrc; sh install.sh; cd -; rm -fr bashrc"
 
 homeAlias=$HOME'/.bashrc'
 
