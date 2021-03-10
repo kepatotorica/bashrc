@@ -1,19 +1,28 @@
-# something with output | clip
+#P
+pcty="/c/Paylocity"
+alias oneline="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all"
+alias checkout="git checkout -"
+alias mygit="cd "$pcty
+alias myGit="cd "$pcty
+alias MyGit="cd "$pcty
+alias Mygit="cd "$pcty
+alias Paylocity="cd "$pcty
+alias paylocity="cd "$pcty
+alias pay="cd "$pcty
+alias common="cd "$pcty"paylocity.taxfiling.common "
+alias transcommon="cd "$pcty"paylocity.taxfiling.common "
+alias transc="cd "$pcty"paylocity.taxfiling.common "
+alias transsc="cd "$pcty"paylocity.taxfiling.transmission.scenarios"
+alias transs="cd "$pcty"paylocity.taxfiling.transmission.scenarios"
+alias transapi="cd "$pcty"paylocity.taxfiling.transmission.api "
+alias formgen="cd "$pcty"paylocity.taxfiling.transmission/"
+alias trans="cd "$pcty"paylocity.taxfiling.transmission/"
+alias transdb="cd "$pcty"paylocity.taxfiling.transmission.db"
+alias transui="cd "$pcty"paylocity.taxfiling.transmission.ui"
+alias setup="cd C:\Paylocity\DevBuildTasks\; ./ConfigurationDatabaseSetup.bat; cd C:\Paylocity\Escher\DeveloperTasks\DatabaseSetup; ./ConfigurationDatabase_Deploy.bat"
 
-alias common="cd /c/Paylocity/paylocity.taxfiling.common "
-alias transcommon="cd /c/Paylocity/paylocity.taxfiling.common "
-alias transc="cd /c/Paylocity/paylocity.taxfiling.common "
-alias transsc="cd /c/Paylocity/paylocity.taxfiling.transmission.scenarios"
-alias transs="cd /c/Paylocity/paylocity.taxfiling.transmission.scenarios"
-alias cleanrepo="echo 'git clean -fdx'; temp; git reset --hard; git clean -fdx"
-alias gitclean="echo 'git clean -fdx'; temp; git reset --hard; git clean -fdx"
-alias transapi="cd /c/Paylocity/paylocity.taxfiling.transmission.api "
-alias master="git checkout master; git pull"
-alias temp="git branch -d temp; git checkout -b temp; git checkout -"
-alias formgen="cd /c/Paylocity/paylocity.taxfiling.transmission/"
-alias trans="cd /c/Paylocity/paylocity.taxfiling.transmission/"
-alias transdb="cd /c/Paylocity/paylocity.taxfiling.transmission.db"
-alias transui="cd /c/Paylocity/paylocity.taxfiling.transmission.ui"
+#git
+alias rmorig="find . -name *.*.orig -type f -delete; find . -wholename */*/*.*.orig -type f -delete"
 alias fetch="git fetch "
 alias gitreset="git reset --hard "
 alias push="git push "
@@ -23,7 +32,11 @@ alias lc="git ls-files | while read f; do git blame -w -M -C -C --line-porcelain
 alias mergeMaster="git checkout master; git pull; git checkout -; git merge master; git mergetool"
 alias mergemaster="git checkout master; git pull; git checkout -; git merge master; git mergetool"
 alias mmaster="git checkout master; git pull; git checkout -; git merge master; git mergetool"
-alias rmorig="find . -name *.*.orig -type f -delete; find . -wholename */*/*.*.orig -type f -delete"
+alias cleanrepo="echo 'git clean -fdx'; temp; git reset --hard; git clean -fdx"
+alias gitclean="echo 'git clean -fdx'; temp; git reset --hard; git clean -fdx"
+alias temp="git branch -d temp; git checkout -b temp; git checkout -"
+alias master="git checkout master; git pull"
+# https://stackoverflow.com/questions/5189560/squash-my-last-x-commits-together-using-git/5201642#5201642
 alias squash="echo 'git reset --soft HEAD~1 && git commit'"
 alias cc="echo 'git reset --soft HEAD~1 && git commit, use cc(num commits to squash)'"
 alias ccb="git reset HEAD@{1}"
@@ -35,75 +48,20 @@ alias cc5="git reset --soft HEAD~5"
 alias cc6="git reset --soft HEAD~6"
 alias cc7="git reset --soft HEAD~7"
 alias combine="echo 'git reset --soft HEAD~1 && git commit, use cc(num commits to squash)'"
-# https://stackoverflow.com/questions/5189560/squash-my-last-x-commits-together-using-git/5201642#5201642
-# alias oneline="git log --oneline"
-alias oneline="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all"
-alias checkout="git checkout -"
-alias workspace="cd /c/Users/KTotorica/source/repos"
-alias visual="cd /c/Users/KTotorica/source/repos"
-alias visualStudio="cd /c/Users/KTotorica/source/repos"
-alias repos="cd /c/Users/KTotorica/source/repos"
-alias desktop="cd /c/Users/KTotorica/Desktop"
-alias Desktop="cd /c/Users/KTotorica/Desktop"
-alias mygit="cd /c/Paylocity "
-alias myGit="cd /c/Paylocity "
-alias MyGit="cd /c/Paylocity "
-alias Mygit="cd /c/Paylocity "
-alias Paylocity="cd /c/Paylocity "
-alias paylocity="cd /c/Paylocity "
-alias pay="cd /c/Paylocity "
 
+#Explorer
 alias cdDownloads='cd ~/Downloads'
 alias downloads='start ~/Downloads'
 alias Downloads='start ~/Downloads'
 alias open="start ."
-alias killnpm='cmd "/C TASKKILL /IM node.exe /F"'
-alias killjava='cmd "/C taskkill.exe /F /IM java.exe"'
-alias defaultMaster="git branch --set-upstream-to origin/master "
-alias defaultmaster="git branch --set-upstream-to origin/master "
-alias pushmaster="git branch --set-upstream-to origin/master "
-alias pushMaster="git branch --set-upstream-to origin/master "
+
 alias edit="code ~/.bashrc"
-alias bashrc="code ~/.bashrc"
 alias reset="source ~/.bashrc"
 
-# PROMPT_COMMAND='__posh_git_ps1 "\u@\h:\w " "\\\$ ";'$PROMPT_COMMAND
-
-homeAlias='/c/Users/ktotorica/.bashrc'
+userAlias='/c/Users/kep'
+homeAlias=$userAlias'/.bashrc'
 
 addAlias() {
-    touch temp;
-    echo -n 'alias ' >> temp;
-    read -p "Enter a name for this alias: " value
-    echo -n $value >> temp;
-    echo -n '="' >> temp;
-    for item in "$@" ;
-        do echo -n "$item" >> temp;
-        echo -n " " >> temp;
-        done;
-    echo '"' >> temp;
-    cat $homeAlias >> temp;
-    mv -f temp $homeAlias;
-    source ~/.bashrc -q;
-}
-
-addalias() {
-    touch temp;
-    echo -n 'alias ' >> temp;
-    read -p "Enter a name for this alias: " value
-    echo -n $value >> temp;
-    echo -n '="' >> temp;
-    for item in "$@" ;
-        do echo -n "$item" >> temp;
-        echo -n " " >> temp;
-        done;
-    echo '"' >> temp;
-    cat $homeAlias >> temp;
-    mv -f temp $homeAlias;
-    source ~/.bashrc -q;
-}
-
-newalias() {
     touch temp;
     echo -n 'alias ' >> temp;
     read -p "Enter a name for this alias: " value
@@ -143,28 +101,12 @@ commit_branch_prepend() {
     git commit -am "${BRANCH_NAME##*/}: $value"
 }
 
-
-# commit() {
-#     git add .
-#     BRANCH_NAME=$(git symbolic-ref --short HEAD)
-#     optional_warning="do you need to change the readme and the Version.cs file?"
-#     echo ${optional_warning}
-#     read -p "message: " value
-#     echo
-#     echo "git commit -am \"${BRANCH_NAME##*/}: $value\""
-#     git commit -am "${BRANCH_NAME##*/}: $value"
-# }
-
 commit() {
     str="$*"
 
     BRANCH_NAME=$(git symbolic-ref --short HEAD)
 
-    # read -p "Did you update Readme and src/Version?: (enter for yes, anything for no)" value
-    # read -p "would you like to push?: (enter for no, anything for yes)" value
-    # if [ -z $value ]
-    # then
-    if [ -z "$str" ]
+    if [ -z "$str" ] 
     then
         read -p "Enter a commit message: " str
     fi
@@ -175,7 +117,7 @@ commit() {
 }
 
 
-pp() { #git push -u origin branch name
+pp() {
     str="$*"
     BRANCH_NAME=$(git symbolic-ref --short HEAD)
     echo "git push --set-upstream origin ${BRANCH_NAME}"
@@ -187,21 +129,42 @@ generateEmbedded(){
     echo "$(find . -name \*.xsd | tr "/" .)"
 }
 
-# You must do the stuff below to get powerline in git, also make sure to set the font to a PL font. 
-# here is a video for the prompt steps https://www.youtube.com/watch?v=lu__oGZVT98
-# for git bash just choos it in settings
-# for windows terminal just set it in the settings.json under the bash profile
-# cd $HOME
-# mkdir -p .bash/themes/git_bash_windows_powerline
-# git clone https://github.com/diesire/git_bash_windows_powerline.git .bash/themes/git_bash_windows_powerline
-# git clone https://github.com/powerline/fonts.git --depth=1
-# cd fonts
-# ./install.sh
-# cd ..
-# rm -rf fonts
 
+
+#Install the fonts
+installPowerline(){
+    # You must do the stuff below to get powerline in git bash, also make sure to set the font to a PL font in settings.json. 
+    cd $HOME
+    mkdir -p .bash/themes/git_bash_windows_powerline
+    git clone https://github.com/diesire/git_bash_windows_powerline.git .bash/themes/git_bash_windows_powerline
+
+    # here is a video for the prompt steps 
+    # the text guide https://www.hanselman.com/blog/how-to-make-a-pretty-prompt-in-windows-terminal-with-powerline-nerd-fonts-cascadia-code-wsl-and-ohmyposh
+    cd -
+    curl -LJO https://github.com/microsoft/cascadia-code/releases/download/v2102.25/CascadiaCode-2102.25.zip
+    unzip CascadiaCode-2102.25.zip
+    mkdir c:/Windows/Fonts
+    mv ttf/CascadiaCodePL.ttf c:/Windows/Fonts/
+    mv ttf/CascadiaMonoPL.ttf c:/Windows/Fonts/
+    sleep 3
+    rm -fr otf
+    rm -fr woff2
+    rm -fr ttf
+    rm -fr CascadiaCode-2102.25.zip
+    echo "If you cannot see your font in the settings for bash (it will be postfixed with a PL)"
+    echo "then download fonts from here https://github.com/microsoft/cascadia-code/releases"
+    echo "Then follow this guide (timestamped) https://youtu.be/lu__oGZVT98?t=186"
+}
+
+
+# cd ..
+# the fonts https://github.com/microsoft/cascadia-code/releases?WT.mc_id=-blog-scottha
 THEME=$HOME/.bash/themes/git_bash_windows_powerline/theme.bash
 if [ -f $THEME ]; then
    . $THEME
 fi
 unset THEME
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
