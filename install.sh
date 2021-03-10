@@ -5,5 +5,5 @@ cp settings.json ~/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbw
 source ~/.bashrc
 echo "installing bash theme"
 cp theme.bash ~/.bash/themes/git_bash_windows_powerline/theme.bash
-echo "installing Powerline"
-installPowerline
+echo "installing Powerline Fonts"
+installPowerlineFonts
