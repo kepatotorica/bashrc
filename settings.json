@@ -27,7 +27,8 @@
         "defaults":
         {
             "fontFace" : "Cascadia Mono PL", 
-            "fontSize" : 12
+            "fontSize" : 12,
+            "startingDirectory": "C:\\dev\\"
         },
         "list":
         [
