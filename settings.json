@@ -1,0 +1,97 @@
+{
+    // This is how you make a shortcut for the terminal so you can have it run as admin 
+    //
+    // Run the below script to create a shortcut, then download the terminal icon 
+    //    https://raw.githubusercontent.com/microsoft/terminal/main/res/terminal.ico
+    //
+    // $WshShell = New-Object -comObject WScript.Shell
+    // $Shortcut = $WshShell.CreateShortcut("$Home\Desktop\Windows Terminal.lnk")
+    // $Shortcut.TargetPath = "$env:LOCALAPPDATA\Microsoft\WindowsApps\Microsoft.WindowsTerminal_8wekyb3d8bbwe\wt.exe"
+    // $Shortcut.Save()
+    // $bytes = [System.IO.File]::ReadAllBytes("$Home\Desktop\Windows Terminal.lnk")
+    // $bytes[0x15] = $bytes[0x15] -bor 0x20 #set byte 21 (0x15) bit 6 (0x20) ON
+    // [System.IO.File]::WriteAllBytes("$Home\Desktop\Windows Terminal.lnk", $bytes)
+    //
+    //
+    // put the newly created shortcut into a slot in the task bar and type win + slot number (1 indexed) to use the shortcut
+    // download the icon from above, then right click the shortcut and go to directory, move the ico into there and then change the icon of the shortcut to the ico that was downloaded.
+    // If this doesn't work you can just do win + r; then type wt; then ctrl + shift + enter
+    //
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "defaultProfile": "{14ad203f-52cc-4110-90d6-d96e0f41b64d}",
+    "copyOnSelect": false,
+    "copyFormatting": false,
+
+    "profiles":
+    {
+        "defaults":
+        {
+            "fontFace" : "Cascadia Mono PL", 
+            "fontSize" : 12
+        },
+        "list":
+        [
+            {
+                // Make changes here to the powershell.exe profile.
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "name": "Windows PowerShell",
+                "commandline": "powershell.exe",
+                "hidden": false
+            },
+            {
+                // Make changes here to the cmd.exe profile.
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "name": "Command Prompt",
+                "commandline": "cmd.exe",
+                "hidden": false
+            },
+            { 
+                "tabTitle": "Git Bash",
+                "acrylicOpacity" : 0.75, 
+                "closeOnExit" : true, 
+                "colorScheme" : "Campbell", 
+                "commandline" : "C:/Program Files/Git/bin/bash.exe --login", 
+                "cursorColor" : "#FFFFFF", 
+                "cursorShape" : "bar", 
+                "guid" : "{14ad203f-52cc-4110-90d6-d96e0f41b64d}", 
+                "historySize" : 9001, 
+                "icon": "ms-appdata:///roaming/git-bash_32px.ico",
+                "name" : "Git Bash", 
+                "padding" : "0, 0, 0, 0", 
+                "snapOnInput" : true, 
+                "useAcrylic" : true 
+            },
+            {
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+                "hidden": false,
+                "name": "Azure Cloud Shell",
+                "source": "Windows.Terminal.Azure"
+            }
+        ]
+    },
+
+    // Add custom color schemes to this array.
+    // To learn more about color schemes, visit https://aka.ms/terminal-color-schemes
+    "schemes": [],
+
+    // Add custom keybindings to this array.
+    // To unbind a key combination from your defaults.json, set the command to "unbound".
+    // To learn more about keybindings, visit https://aka.ms/terminal-keybindings
+    "keybindings":
+    [
+        // Copy and paste are bound to Ctrl+Shift+C and Ctrl+Shift+V in your defaults.json.
+        // These two lines additionally bind them to Ctrl+C and Ctrl+V.
+        // To learn more about selection, visit https://aka.ms/terminal-selection
+        { "command": {"action": "copy", "singleLine": false }, "keys": "ctrl+c" },
+        { "command": "paste", "keys": "ctrl+v" },
+
+        // Press Ctrl+Shift+F to open the search box
+        { "command": "find", "keys": "ctrl+shift+f" },
+
+        // Press Alt+Shift+D to open a new pane.
+        // - "split": "auto" makes this pane open in the direction that provides the most surface area.
+        // - "splitMode": "duplicate" makes the new pane use the focused pane's profile.
+        // To learn more about panes, visit https://aka.ms/terminal-panes
+        { "command": { "action": "splitPane", "split": "auto", "splitMode": "duplicate" }, "keys": "alt+shift+d" }
+    ]
+}

@@ -51,15 +51,18 @@ alias combine="echo 'git reset --soft HEAD~1 && git commit, use cc(num commits t
 
 #Explorer
 alias cdDownloads='cd ~/Downloads'
-alias downloads='start ~/Downloads'
-alias Downloads='start ~/Downloads'
+alias downloads='cd ~/Downloads'
+alias Downloads='cd ~/Downloads'
+alias desktop='cd ~/Desktop'
+alias Desktop='cd ~/Desktop'
 alias open="start ."
 
 alias edit="code ~/.bashrc"
+alias editTerminal="code ~/.bashrc"
+alias settings="code ~/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json"
 alias reset="source ~/.bashrc"
 
-userAlias='/c/Users/kep'
-homeAlias=$userAlias'/.bashrc'
+homeAlias=$HOME'/.bashrc'
 
 addAlias() {
     touch temp;
@@ -146,14 +149,14 @@ installPowerline(){
     mkdir c:/Windows/Fonts
     mv ttf/CascadiaCodePL.ttf c:/Windows/Fonts/
     mv ttf/CascadiaMonoPL.ttf c:/Windows/Fonts/
-    sleep 3
     rm -fr otf
     rm -fr woff2
     rm -fr ttf
     rm -fr CascadiaCode-2102.25.zip
-    echo "If you cannot see your font in the settings for bash (it will be postfixed with a PL)"
-    echo "then download fonts from here https://github.com/microsoft/cascadia-code/releases"
-    echo "Then follow this guide (timestamped) https://youtu.be/lu__oGZVT98?t=186"
+    echo ""
+    echo ""
+    echo ""
+    echo "If you cannot see your font in the settings for bash (it will be postfixed with a PL) then download fonts from here https://github.com/microsoft/cascadia-code/releases Then follow this guide (timestamped) https://youtu.be/lu__oGZVT98?t=186"
 }
 
 
@@ -165,6 +168,4 @@ if [ -f $THEME ]; then
 fi
 unset THEME
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+PROMPT_DIRTRIM=2
