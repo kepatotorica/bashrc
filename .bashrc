@@ -19,6 +19,8 @@ alias formgen="cd "$pcty"paylocity.taxfiling.transmission/"
 alias trans="cd "$pcty"paylocity.taxfiling.transmission/"
 alias transdb="cd "$pcty"paylocity.taxfiling.transmission.db"
 alias transui="cd "$pcty"paylocity.taxfiling.transmission.ui"
+alias taxd="cd "$pcty"paylocity.taxfiling.taxdistro "
+alias taxm="cd "$pcty"paylocity.taxfiling.Forms.Messaging "
 alias setup="cd C:\Paylocity\DevBuildTasks\; ./ConfigurationDatabaseSetup.bat; cd C:\Paylocity\Escher\DeveloperTasks\DatabaseSetup; ./ConfigurationDatabase_Deploy.bat"
 
 #git
@@ -110,15 +112,21 @@ commit() {
     str="$*"
 
     BRANCH_NAME=$(git symbolic-ref --short HEAD)
-
+    
+    echo $BRANCH_NAME
     if [ -z "$str" ] 
     then
         read -p "Enter a commit message: " str
     fi
 
-    git add .
-    echo "git commit -am \"${BRANCH_NAME##*/}: $str\""
-    git commit -am "${BRANCH_NAME##*/}: $str"
+    if [ $BRANCH_NAME != "master" ]
+    then
+        git add .
+        echo "git commit -am \"${BRANCH_NAME##*/}: $str\""
+        git commit -am "${BRANCH_NAME##*/}: $str"
+    else
+        echo "You should not be commiting on master!!!"
+    fi
 }
 
 
